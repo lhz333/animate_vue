@@ -31,5 +31,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  .pagearea-title {
+    animation-fill-mode: backwards; // 动画结束后停留在第一帧
+  }
 }
 </style>
