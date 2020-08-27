@@ -1,6 +1,7 @@
 <template>
   <div class="pagearea">
     <h2
+      ref="animate"
       class="pagearea-title animate__animated"
       :class="`animate__${animateClassName}`"
     >
@@ -9,7 +10,7 @@
   </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "",
   data () {
@@ -18,9 +19,15 @@ export default {
   computed: {
     ...mapGetters(["animateClassName"])
   },
-  methods: {},
+  methods: {
+    ...mapActions(["setAnimateClassName"])
+  },
   created () { },
-  mounted () { },
+  mounted () {
+    this.$refs.animate.addEventListener("animationend", () => {
+      this.setAnimateClassName("");
+    });
+  },
   watch: {}
 };
 </script>
