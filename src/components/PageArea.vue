@@ -1,17 +1,23 @@
 <template>
   <div class="pagearea">
-    <h2 class="pagearea-title animate__animated animate__zoomInDown">动画效果展示</h2>
+    <h2
+      class="pagearea-title animate__animated"
+      :class="`animate__${animateClassName}`"
+    >
+      动画效果展示
+    </h2>
   </div>
 </template>
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "",
   data () {
     return {};
   },
-  components: {},
-  props: {},
-  computed: {},
+  computed: {
+    ...mapGetters(["animateClassName"])
+  },
   methods: {},
   created () { },
   mounted () { },
