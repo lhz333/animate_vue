@@ -4,7 +4,7 @@
       <el-header>
         <Header />
       </el-header>
-      <el-container>
+      <el-container class="content">
         <el-aside width="200px">
           <AnimateList />
         </el-aside>
@@ -38,7 +38,10 @@ export default {
   user-select: none;
 }
 .el-container {
-  height: 100% !important;
+  height: 100%;
+}
+.content {
+  height: calc(100% - 60px);
 }
 .el-header {
   background-color: #b3c0d1;
@@ -50,14 +53,10 @@ export default {
 .el-aside {
   background-color: #d3dce6;
   color: #333;
-  text-align: center;
-  line-height: 200px;
 }
 
 .el-main {
   background-color: #e9eef3;
   color: #333;
-  text-align: center;
-  line-height: 160px;
 }
 </style>

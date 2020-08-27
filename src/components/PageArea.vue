@@ -1,5 +1,7 @@
 <template>
-  <div>动画效果展示区域</div>
+  <div class="pagearea">
+    <h2 class="pagearea-title animate__animated animate__zoomInDown">动画效果展示</h2>
+  </div>
 </template>
 <script>
 export default {
@@ -17,4 +19,11 @@ export default {
 };
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.pagearea {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

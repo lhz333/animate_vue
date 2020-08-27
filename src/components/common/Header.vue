@@ -1,5 +1,7 @@
 <template>
-  <div class="header"></div>
+  <div class="header">
+    animate_vue demo
+  </div>
 </template>
 <script>
 export default {
@@ -10,4 +12,8 @@ export default {
 };
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.header {
+  text-align: center;
+}
+</style>
