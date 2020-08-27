@@ -1,12 +1,16 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import wow from 'wowjs';
+import 'animate.css';
+
+Vue.prototype.$wow = wow;
 
 Vue.config.productionTip = false;
 
-new Vue({
+new Vue ({
   router,
   store,
-  render: h => h(App)
-}).$mount("#app");
+  render: h => h (App),
+}).$mount ('#app');
