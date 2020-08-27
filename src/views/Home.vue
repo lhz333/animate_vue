@@ -5,8 +5,12 @@
         <Header />
       </el-header>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-main>Main</el-main>
+        <el-aside width="200px">
+          <AnimateList />
+        </el-aside>
+        <el-main>
+          <PageArea />
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -15,11 +19,15 @@
 <script>
 // @ is an alias to /src
 import Header from "@/components/common/Header.vue";
+import AnimateList from "@/components/animateList/AnimateList.vue";
+import PageArea from "@/components/PageArea.vue";
 
 export default {
   name: "Home",
   components: {
-    Header
+    Header,
+    AnimateList,
+    PageArea
   }
 };
 </script>
@@ -32,22 +40,22 @@ export default {
 .el-container {
   height: 100% !important;
 }
-.el-header{
-  background-color: #B3C0D1;
+.el-header {
+  background-color: #b3c0d1;
   color: #333;
   text-align: center;
   line-height: 60px;
 }
 
 .el-aside {
-  background-color: #D3DCE6;
+  background-color: #d3dce6;
   color: #333;
   text-align: center;
   line-height: 200px;
 }
 
 .el-main {
-  background-color: #E9EEF3;
+  background-color: #e9eef3;
   color: #333;
   text-align: center;
   line-height: 160px;
